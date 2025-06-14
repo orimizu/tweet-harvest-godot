@@ -1,6 +1,7 @@
 # Twitter Bookmark to Markdown Converter (Godot版)
 
-Twitter/XのブックマークをMarkdown形式に変換するGodotデスクトップアプリケーションです。
+Chromeの拡張機能「Twitterのブックマークエクスポート」でエクスポートしたjsonを、Markdown形式に変換するGodotデスクトップアプリケーションです。
+初期は、python の FLASK + HTML/Javascriptで書いていましたが、Godotに書き直しました。
 
 ## 主な機能
 

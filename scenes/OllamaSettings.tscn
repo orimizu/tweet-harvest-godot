@@ -1,0 +1,120 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4j3h2n1k5m7v"]
+
+[ext_resource type="Script" path="res://scripts/OllamaSettings.gd" id="1_0y8kj"]
+
+[node name="OllamaSettings" type="Window"]
+title = "Ollama設定"
+initial_position = 2
+size = Vector2i(600, 400)
+unresizable = true
+script = ExtResource("1_0y8kj")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Ollama設定"
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 28
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="URLContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="URLLabel" type="Label" parent="VBoxContainer/URLContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 0)
+text = "URL:"
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="URLInput" type="LineEdit" parent="VBoxContainer/URLContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "http://localhost:11434"
+placeholder_text = "http://localhost:11434"
+theme_override_font_sizes/font_size = 20
+
+[node name="TestButton" type="Button" parent="VBoxContainer/URLContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 40)
+text = "接続確認"
+theme_override_font_sizes/font_size = 20
+
+[node name="StatusContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="StatusLabel" type="Label" parent="VBoxContainer/StatusContainer"]
+layout_mode = 2
+text = "ステータス: "
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="StatusValue" type="Label" parent="VBoxContainer/StatusContainer"]
+layout_mode = 2
+text = "未確認"
+theme_override_font_sizes/font_size = 20
+
+[node name="ModelContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ModelLabel" type="Label" parent="VBoxContainer/ModelContainer"]
+layout_mode = 2
+text = "モデル選択:"
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="ModelSelect" type="OptionButton" parent="VBoxContainer/ModelContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 40)
+theme_override_font_sizes/font_size = 20
+
+[node name="ThinkingContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ThinkingLabel" type="Label" parent="VBoxContainer/ThinkingContainer"]
+layout_mode = 2
+text = "思考トークン制御:"
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 20
+
+[node name="ThinkingSelect" type="OptionButton" parent="VBoxContainer/ThinkingContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 40)
+theme_override_font_sizes/font_size = 20
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ButtonContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 40)
+text = "キャンセル"
+theme_override_font_sizes/font_size = 20
+
+[node name="OKButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+layout_mode = 2
+custom_minimum_size = Vector2(120, 40)
+text = "OK"
+theme_override_font_sizes/font_size = 20
+disabled = true

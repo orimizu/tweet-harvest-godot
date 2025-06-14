@@ -3,6 +3,8 @@
 Chromeの拡張機能「Twitterのブックマークエクスポート」でエクスポートしたjsonを、Markdown形式に変換するGodotデスクトップアプリケーションです。
 初期は、python の FLASK + HTML/Javascriptで書いていましたが、Godotに書き直しました。
 
+![Tweet Harvest Godot](https://github.com/orimizu/tweet-harvest-godot/blob/main/img/tweet-harvest-godot_v1.0.0.png?raw=true "Tweet Harvest Godot")
+
 ## 主な機能
 
 - 📝 Twitter/XのブックマークJSONファイルをMarkdown形式に変換
